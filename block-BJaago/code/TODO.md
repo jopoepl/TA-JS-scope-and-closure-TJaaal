@@ -67,7 +67,7 @@ sayHi();
 ```js
 console.log(arr); // output
 console.log(username); // output
-var usename = 'Sam';
+var username = 'Sam';
 var arr = [1, 2, 3, 4, 5, 6];
 
 function double(num) {
