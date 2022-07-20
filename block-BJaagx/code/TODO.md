@@ -3,21 +3,21 @@
 
 ```js
 let marks = [34, 45, 56, 76];
-function multiplyArrayByN(arr, cb) {
+function multiplyArrayByN(arr, cb) { //multiplyArrayByN is Higherorder function
   let finalArr = [];
   for (let elm of arr) {
-    finalArr.push(cb(elm));
+    finalArr.push(cb(elm)); //cb is callback fn
   }
   return finalArr;
 }
-function addFive(n) {
+function addFive(n) { //this is cb function in the context of numbersAddedFive
   return n + 5;
 }
-function multiplyBy5(n) {
+function multiplyBy5(n) { //this is cb function in the context of numbersMultipliedByFive
   return n * 5;
 }
 let numbersAddedFive = multiplyArrayByN(marks, addFive);
-let numbersMultipliedBy5 = multiplyArrayByN(marks, multiplyBy5);
+let numbersMultipliedBy5 = multiplyArrayByN(marks, multiplyBy5); 
 ```
 
 2. Create the execution context diagram of the above code snippet
@@ -26,8 +26,9 @@ let numbersMultipliedBy5 = multiplyArrayByN(marks, multiplyBy5);
 
 ```js
 function operation(n, opFn) {
-  // your code goes her
+   return opFn(n)
 }
+
 // TEST
 console.log(
   operation(21, function (n) {
@@ -47,7 +48,7 @@ console.log(
 
 ```js
 function operation(str, opFn) {
-  // your code goes her
+  return opFn(str) 
 }
 // TEST
 console.log(
