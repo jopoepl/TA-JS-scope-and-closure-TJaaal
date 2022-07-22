@@ -10,8 +10,8 @@
 **You can use normal for loop for this function**
 
 ```js
-function loop() {
-  // Your code goes here
+function loop(n=0, n<=9, n++) {
+  
 }
 
 loop(
@@ -23,6 +23,8 @@ loop(
 // → 3
 // → 2
 // → 1
+
+s
 ```
 
 2. The function `reduce` takes an array and reduces the elements to a single value. For example it can sum all the numbers, multiply them, or any operation that you can put into a function.
