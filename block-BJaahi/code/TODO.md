@@ -149,7 +149,7 @@ var nextMessage = sayHello('Test');
 ```js
 //Declaration Phase
 
-let username = undefined;
+let username;
 
 let number;
 let message;
@@ -201,33 +201,18 @@ age = 21;
 
 ```js
 function sayHi(name) {
+  var name = undefined;
+  let age;
+
+
   console.log(name);
   console.log(age);
-  var name = 'Lydia';
-  let age = 21;
+  name = 'Lydia';
+  age = 21;
 }
 
 sayHi();
 
-//Declaration Phase
-
-function sayHi(name) {
-  console.log(name);
-  console.log(age);
-  var name = 'Lydia';
-  let age = 21;
-}
-
-//Execution Phase
-
-function sayHi(name) {
-  console.log(name);
-  console.log(age);
-  var name = 'Lydia';
-  let age = 21;
-}
-
-sayHi();
 ```
 
 <!-- Answer -->
@@ -251,7 +236,22 @@ function sayHi(name) {
 <!-- Answer -->
 
 ```js
-// Your code goes here
+
+function sayHi(name) {
+  var name = undefined;
+  let age;
+
+
+
+  console.log(name);
+  console.log(age);
+   name = 'Lydia';
+   age = 21;
+}
+
+
+sayHi();
+
 ```
 
 8.
@@ -269,7 +269,18 @@ let sayHi = function sayHi(name) {
 <!-- Answer -->
 
 ```js
-// Your code goes here
+
+let sayHi;
+sayHi();//error
+
+sayHi = function sayHi(name) {
+  console.log(name);
+  console.log(age);
+  var name = 'Lydia';
+  let age = 21;
+};
+
+
 ```
 
 9.
@@ -284,7 +295,15 @@ let num2 = 30;
 <!-- Answer -->
 
 ```js
-// Your code goes here
+let num1;
+var sum = undefined;
+let num2;
+
+
+ num1 = 21;
+console.log(sum);
+ sum = num1 + num2;
+ num2 = 30;
 ```
 
 10.
@@ -308,7 +327,27 @@ let sum = add(num1, num2, 4, 5, 6);
 <!-- Answer -->
 
 ```js
-// Your code goes here
+var num1 = undefined;
+let sum2;
+let add;
+let num2;
+let sum;
+function addAgian(a, b) {
+  return a + b;
+}
+
+
+num1 = 21;
+
+sum2 = addAgain(num1, num2, 4, 5, 6);
+
+add = (a, b, c, d, e) => {
+  return a + b + c + d + e;
+};
+
+ num2 = 200;
+
+ sum = add(num1, num2, 4, 5, 6);
 ```
 
 11.
@@ -329,7 +368,18 @@ let add = (a, b) => {
 <!-- Answer -->
 
 ```js
-// Your code goes here
+function test(a) {
+  let num1 = 21;
+  return add(a, num1);
+}
+let sum;
+let add;
+
+sum = test(100);
+
+add = (a, b) => {
+  return a + b;
+};
 ```
 
 12.
@@ -350,5 +400,18 @@ function add(a, b) {
 <!-- Answer -->
 
 ```js
-// Your code goes here
+function test(a) {
+  let num1 = 21;
+  return add(a, num1);
+}
+let sum; 
+function add(a, b) {
+  return a + b;
+}
+
+
+
+sum = test(100);
+
+
 ```
