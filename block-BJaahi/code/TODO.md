@@ -64,7 +64,27 @@ var nextMessage = sayHello('Test');
 <!-- Answer -->
 
 ```js
-// Your code goes here
+// Declaration Phase
+var username = undefined;
+let number;
+
+function sayHello(name) {
+  return `Hello ${name}`;
+}
+
+let message;
+var nextMessage = undefined;
+
+// Execution Phase
+
+username = 'Arya';
+number = 21;
+
+
+message = sayHello(username);
+nextMessage = sayHello('Test');
+
+
 ```
 
 3.
@@ -85,7 +105,27 @@ var nextMessage = sayHello('Test');
 <!-- Answer -->
 
 ```js
-// Your code goes here
+//Declaration Phase
+
+
+let username = undefined;
+let number;
+
+let sayHello = function (name) {
+  return `Hello ${name}`;
+};
+
+let message = undefined;
+var nextMessage;
+
+//Execution Phase
+console.log(username, numbers);
+username = 'Arya';
+number = 21;
+
+
+message = sayHello(username);
+nextMessage = sayHello('Test');
 ```
 
 4.
@@ -107,7 +147,29 @@ var nextMessage = sayHello('Test');
 <!-- Answer -->
 
 ```js
-// Your code goes here
+//Declaration Phase
+
+let username = undefined;
+
+let number;
+let message;
+
+let sayHello = function (name) {
+  return `Hello ${name}`;
+};
+
+var nextMessage = undefined;
+
+//Execution Phase
+
+username = 'Arya';
+console.log(username, numbers);
+
+number = 21;
+message = sayHello(username);
+
+
+nextMessage = sayHello('Test');
 ```
 
 5.
@@ -122,12 +184,42 @@ let age = 21;
 <!-- Answer -->
 
 ```js
-// Your code goes here
+//Declaration Phase
+
+
+var name = undefined;
+let age;
+
+//Execution Phase
+console.log(name);
+console.log(age);
+name = 'Lydia';
+age = 21;
 ```
 
 6.
 
 ```js
+function sayHi(name) {
+  console.log(name);
+  console.log(age);
+  var name = 'Lydia';
+  let age = 21;
+}
+
+sayHi();
+
+//Declaration Phase
+
+function sayHi(name) {
+  console.log(name);
+  console.log(age);
+  var name = 'Lydia';
+  let age = 21;
+}
+
+//Execution Phase
+
 function sayHi(name) {
   console.log(name);
   console.log(age);
