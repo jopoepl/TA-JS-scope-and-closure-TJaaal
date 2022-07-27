@@ -166,10 +166,10 @@ The function `schedule` will execute the function at first index after the value
 ```js
 function schedule(arr1, arr2) {
   if(arr1.length !== arr2.length) {
-    alert(`invalid input`);
+    return alert(`invalid input`);
   } else {
-    arr2.forEach((time,i) => {
-      setTimeout(arr1[i](),time)
+    arr1.forEach((fn,i) => {
+      setTimeout(fn(),arr2[i]*1000)
     })
   }
 }
